@@ -1,0 +1,15 @@
+{% extends "book_outlet/index.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<h1> {{ author }}</h2>
+    <p> The book has a rating of {{ rating }}
+    {% if is_bestseller %}and is a best seller.
+    {% else %}
+        and is not a best seller.
+    {% endif %}
+    </p>
+    <footer><a href="{% url 'index' %}"> Home</a></footer>
+{% endblock %}
